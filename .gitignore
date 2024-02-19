@@ -71,9 +71,5 @@ Intermediate/*
 Plugins/*/Intermediate/*
 
 
-#Platforms Ignore
-Platforms/*
-
-
 # Cache files for the editor to use
 DerivedDataCache/*
