@@ -5,5 +5,6 @@ Currently all features are implemented through blueprint scripting
 
 Refacting features into C++ something to work on to furhter my C++ skills, especially considering how complex some of the systems are.
 
+FOR CURRENT C++ WORK (Go to Source -> FinalYearProject -> Private)
 
 Gameplay ! - https://youtu.be/hpgkXHIipIM
