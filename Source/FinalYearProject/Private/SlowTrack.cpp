@@ -22,6 +22,7 @@ void ASlowTrack::BeginPlay()
 	FName SnapBoxToFind(TEXT("SnapBox"));
 
 	//Find the Components
+	DefaultRoot = FindComponentByClass<USceneComponent>();
 	Arrow = FindComponentByClass<UArrowComponent>();
 	Billboard = FindComponentByClass<UBillboardComponent>();
 
@@ -83,13 +84,15 @@ void ASlowTrack::OnOverlapEvent(UPrimitiveComponent* OverlappedComp, AActor* Oth
 	//Get the class of the box that is overlapping, only normals can bounce so only normal needs checking
 	UClass* BoxNormalClass = ABoxNormal::StaticClass();
 
-
+	//If classes match
 	if (ActorClass == BoxNormalClass)
 	{
+		//Get a location of the billboard component
 		FVector SnapLocation = Billboard->GetComponentLocation();
 		
 		FRotator NewRotaion(0.0f, 0.0f, 0.0f);
 
+		//Set (snap) the box into place
 		OtherActor->SetActorLocation(SnapLocation, false, false);
 		OtherActor->SetActorRotation(NewRotaion);
 	}
